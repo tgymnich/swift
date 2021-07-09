@@ -7,6 +7,9 @@ add_swift_host_tool(swift-frontend
   swift_api_extract_main.cpp
   SWIFT_COMPONENT compiler
 )
+
+export_executable_symbols_for_plugins(swift-frontend)
+
 target_link_libraries(swift-frontend
                       PRIVATE
                         swiftDriver
